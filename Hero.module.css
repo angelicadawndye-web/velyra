@@ -1,0 +1,161 @@
+.hero {
+  position: relative;
+  min-height: 82vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 80px 60px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4, 4, 10, 0.96) 0%,
+      rgba(7, 7, 18, 0.85) 35%,
+      rgba(12, 10, 25, 0.55) 65%,
+      rgba(12, 10, 25, 0.20) 100%
+    ),
+    url("/hero-poster.jpg");
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.overlay{
+  position:absolute;
+  inset:0;
+  background:radial-gradient(circle at top right,
+      rgba(124,92,255,.30),
+      transparent 45%);
+  pointer-events:none;
+}
+
+.content{
+  position:relative;
+  z-index:2;
+  max-width:620px;
+}
+
+.badge{
+  display:inline-block;
+  margin-bottom:22px;
+  padding:8px 18px;
+  border-radius:999px;
+
+  background:rgba(124,92,255,.18);
+  border:1px solid rgba(124,92,255,.45);
+
+  color:#d7c9ff;
+  font-size:.85rem;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.title{
+  font-size:4.25rem;
+  line-height:1.05;
+  font-weight:800;
+  margin-bottom:24px;
+
+  text-shadow:0 0 25px rgba(0,0,0,.45);
+}
+
+.description{
+  color:#d4d4d8;
+  font-size:1.12rem;
+  line-height:1.8;
+  margin-bottom:28px;
+}
+
+.meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-bottom:36px;
+}
+
+.meta span{
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.10);
+  padding:8px 14px;
+  border-radius:999px;
+  color:#ececec;
+  font-size:.92rem;
+}
+
+.buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px;
+}
+
+.primaryButton{
+  background:linear-gradient(
+      135deg,
+      #8b5cf6,
+      #6d4aff
+  );
+
+  color:white;
+  border:none;
+  border-radius:14px;
+
+  padding:16px 32px;
+
+  font-size:1rem;
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:.25s;
+}
+
+.primaryButton:hover{
+  transform:translateY(-3px);
+  box-shadow:0 12px 35px rgba(124,92,255,.45);
+}
+
+.secondaryButton{
+  background:rgba(255,255,255,.08);
+  color:white;
+
+  border:1px solid rgba(255,255,255,.18);
+
+  border-radius:14px;
+
+  padding:16px 32px;
+
+  cursor:pointer;
+
+  transition:.25s;
+}
+
+.secondaryButton:hover{
+  background:rgba(255,255,255,.16);
+}
+
+@media (max-width:768px){
+
+.hero{
+  min-height:70vh;
+  padding:40px 24px;
+}
+
+.title{
+  font-size:2.6rem;
+}
+
+.description{
+  font-size:1rem;
+}
+
+.buttons{
+  flex-direction:column;
+}
+
+.primaryButton,
+.secondaryButton{
+  width:100%;
+}
+}
